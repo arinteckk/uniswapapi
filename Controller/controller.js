@@ -27,8 +27,7 @@ exports.saveData = async (req, res, next) => {
     const eth = req.body['eth'];
     const dai = req.body['dai'];
 
-    db.collection('data')
-                    .doc(response.uid)
+    db.collection('data').doc()
                     .set({
                         "eth": eth,
                         "dai" : dai,
